@@ -123,9 +123,82 @@
 
 	$nameInput = $_POST['nameInput'];
 	$firstNameInput = $_POST['firstNameInput'];
+	$birthdate4 = $_POST['birthdate'];
+	$card4 = $_POST['card4'];
+	$cardnumber4 = $_POST['cardNumber4'];
 
-	$req4 = $bdd->prepare("UPDATE clients SET lastName = '$nameInput' && firstname ='$firstNameInput' ");
+	//function fidelCard($fidelityCard){
+	//	if(isset($fidelityCard)){
+	//		return 1;
+	//	}else{
+	//		return 0;
+	//	}
+	//}
 
+	$req4 = $bdd->prepare('UPDATE clients SET birthDate = :birthdate,cardNumber= :cardnumber, card= :card WHERE lastName = :nameInput AND firstName = :firstNameInput');
+	 
+	 $req4->execute(array(
+
+	 	'birthdate' => $birthdate4,
+	 	'card' => $card4,
+	 	'cardnumber' => $cardnumber4,
+	 	'nameInput' => $nameInput,
+	 	'firstNameInput'=>$firstNameInput
+	 	
+
+	 ));
+
+	 // EXERCICE 5
+
+	 $name5 = $_POST['title'];
+	 $firstname5 = $_POST['firstname5'];
+	 $date5 = $_POST['date5'];
+
+
+	 $req5 = $bdd->prepare('UPDATE shows SET date= :showDate WHERE title= :title');
+	 $req5 -> execute(array(
+
+	 	'title' => $name5,
+	 	'showDate' => $date5
+
+	 ));
+
+	 // EXERCICE 6
+
+	 $id6 = $_POST['id6'];
+	 $name6 = $_POST['name6'];
+	 $firstname6 = $_POST['firstname6'];
+
+	 $req6 = $bdd->prepare('UPDATE clients SET lastName = :lastname6, firstName= :firstname6 WHERE id= :id6');
+	 $req6 -> execute(array(
+
+	 	'lastname6'=>$name6,
+	 	'firstname6'=>$firstname6,
+	 	'id6'=>$id6
+
+	 ));
+
+	 // EXERCICE 7
+
+	 $name70=$_POST['name70'];
+	 $name71=$_POST['name71'];
+	 $firstname70=$_POST['firstname70'];
+	 $firstname71=$_POST['firstname71'];
+
+	 $req7 = $bdd->prepare('DELETE FROM clients WHERE lastName= :lastname7');
+
+	 $req7->execute(array(
+
+	 	'lastname7'=>$name70
+	 ));
+
+	 $req71 = $bdd->prepare('DELETE FROM clients WHERE lastName= :lastname71');
+	 $req71->execute(array(
+	 	'lastname71'=>$name71
+	 ));
 
 
  ?>
+
+
+

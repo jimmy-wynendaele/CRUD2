@@ -73,27 +73,74 @@
 
 	Exercice 4
 
-	<form action="index_post.php" method="POST">
-		<input type="text" name="nameInput" placeholder="search name">
-		<input type="text" name="firstNameInput" placeholder="search by firstname">
-		<input type="submit" name="submit40">
-	</form>
-
-	<?php 
-
-		echo $birthdate4;
-
-
-	?>
 
 	<form action="index_post.php" method="POST" >
-		<input type="text" name="name" placeholder="title">
-		<input type="text" name="firstname" placeholder="artist">
+		<input type="text" name="nameInput" placeholder="search name">
+		<input type="text" name="firstNameInput" placeholder="search by firstname">
 		<input type="text" name="birthdate" placeholder="date">
+		<input type="text" name="card4" placeholder="card">
+		<input type="text" name="cardNumber4" placeholder="cardnumber">
 		<input type="checkbox" name="fidelitycard" placeholder="fidilty card">
 		<input type="text" name="fidelCardNumber" placeholder="first genre">
 		<input type="submit" name="submit41">
 	</form>
+
+	<br>
+	<br>
+
+	Exercice 5
+
+	<form action="index_post.php" method="POST">
+		<input type="text" name="title" placeholder="show title">
+		<input type="text" name='date5' placeholder="show date">
+		<input type="submit" name="submit5" value="submit">
+	</form>
+
+	<br>
+	<br>
+
+	Exercice 6
+
+
+
+	<form action="index_post.php" method="POST">	
+		<input type="text" name="id6" placeholder="id">
+		<input type="text" name="name6" placeholder="lastname">
+		<input type="text" name="firstname6" placeholder="firstname">
+		<input type="submit" name="submit6" value="submit">
+	</form>
+
+	<br>
+	<br>
+
+	Exercice 7
+
+	<form action="index_post.php" method='POST'>
+			
+		<input type="text" name="name70" placeholder="lastname">
+		<input type="text" name="firstname70">
+		<input type="submit" name="submit7">
+
+	</form>
+
+	<form action="index_post.php" method='POST'>
+		
+		<input type="text" name="name71" placeholder="lastname">
+		<input type="text" name="firstname71">
+		<input type="submit" name="submit71">
+	</form>
+	
+
+	<br>
+	<br>
+
+	Exercice 8
+
+	<form action="index_post.php" method="POST">
+		
+	</form>
+
+
 
 </body>
 </html>
